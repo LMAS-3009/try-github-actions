@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: rtCamp/action-slack-notify@v2.0.0
     env:
-        SLACK_WEBHOOKl: ${{ secrets>SLACK_WEBHOOK }}
+        SLACK_WEBHOOK: ${{ secrets>SLACK_WEBHOOK }}
         SLACK_USERNMAE: 30lmas09
         SLACK_CHANNEL: try1
