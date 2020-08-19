@@ -22,4 +22,4 @@ jobs:
     - name: Install
       run: npm install
     - name: Test
-      run: npm test
+      run: node ./node_modules/http-server/bin/http-server
