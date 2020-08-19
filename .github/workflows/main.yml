@@ -2,15 +2,24 @@
 name: Firebase Continous Deployment
 
 on:
+  pull_request:
   push:
-    branch: [master]
+    branches: 
+      - master
+      - develop
 
 jobs:
-  deploy:
+  test:
+    name: Running Units Tests
     runs-on: ubuntu-latest
+
     steps:
-      -uses: actions/checkout@master
-      -uses: actions/setup-node@master
-      -run: npm ci
-      -uses: w9jds/firebase-action@master
-      
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install
+      run: npm install
+    - name: Test
+      run: npm test
