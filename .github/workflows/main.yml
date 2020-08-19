@@ -13,7 +13,4 @@ jobs:
       -uses: actions/setup-node@master
       -run: npm ci
       -uses: w9jds/firebase-action@master
-       with:
-        args: deploy --only hosting
-       env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      
