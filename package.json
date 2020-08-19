@@ -1,0 +1,22 @@
+{
+  "name": "try1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LMAS-3009/try-github-actions.git"
+  },
+  "author": "lmas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LMAS-3009/try-github-actions/issues"
+  },
+  "homepage": "https://github.com/LMAS-3009/try-github-actions#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
