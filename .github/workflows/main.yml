@@ -2,24 +2,16 @@
 name: Firebase Continous Deployment
 
 on:
-  pull_request:
   push:
     branches: 
       - master
-      - develop
 
 jobs:
-  test:
-    name: Running Units Tests
+  post_slack_message:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install
-      run: npm install
-    - name: Test
-      run: npm test
+      - uses: rtCamp/action-slack-notify@v2.0.0
+    env:
+        SLACK_WEBHOOKl: ${{ secrets>SLACK_WEBHOOK }}
+        SLACK_USERNMAE: 30lmas09
+        SLACK_CHANNEL: try1
