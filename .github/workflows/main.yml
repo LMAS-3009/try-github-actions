@@ -21,8 +21,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install
       run: npm ci
-    - name: install
-      run: node ./node_modules/http-server/bin/http-server
     - uses: w9jds/firebase-action@master
       with:
         args: deploy --only hosting
